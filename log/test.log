@@ -1,0 +1,542 @@
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "year" integer) [0m
+  [1m[35m (23.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (23.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (28.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160410070054')
+  [1m[36m (23.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160410060654')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:22:19', '2016-04-10 07:22:19', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:22:19', '2016-04-10 07:22:19', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:22:19', '2016-04-10 07:22:19', 113629430)
+  [1m[36m (44.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------
+MovieTest: test_one
+-------------------
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:22:40', '2016-04-10 07:22:40', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:22:40', '2016-04-10 07:22:40', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:22:40', '2016-04-10 07:22:40', 113629430)
+  [1m[36m (56.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------
+MovieTest: test_one
+-------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:23:07', '2016-04-10 07:23:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:23:07', '2016-04-10 07:23:07', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:23:07', '2016-04-10 07:23:07', 113629430)
+  [1m[36m (21.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------
+MovieTest: test_one
+-------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:23:56', '2016-04-10 07:23:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:23:56', '2016-04-10 07:23:56', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:23:56', '2016-04-10 07:23:56', 113629430)
+  [1m[36m (23.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:25:26', '2016-04-10 07:25:26', 980190962)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:25:26', '2016-04-10 07:25:26', 298486374)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:25:26', '2016-04-10 07:25:26', 113629430)
+  [1m[36m (23.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:25:36', '2016-04-10 07:25:36', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:25:36', '2016-04-10 07:25:36', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:25:36', '2016-04-10 07:25:36', 113629430)
+  [1m[36m (806.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:26:28', '2016-04-10 07:26:28', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:26:28', '2016-04-10 07:26:28', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:26:28', '2016-04-10 07:26:28', 113629430)
+  [1m[36m (21.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:27:38', '2016-04-10 07:27:38', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:27:38', '2016-04-10 07:27:38', 298486374)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:27:38', '2016-04-10 07:27:38', 113629430)
+  [1m[36m (22.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:30:07', '2016-04-10 07:30:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:30:07', '2016-04-10 07:30:07', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:30:07', '2016-04-10 07:30:07', 113629430)
+  [1m[36m (30.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------
+MovieTest: test_2
+-----------------
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_3
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:30:39', '2016-04-10 07:30:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:30:39', '2016-04-10 07:30:39', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:30:39', '2016-04-10 07:30:39', 113629430)
+  [1m[36m (21.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_2
+-----------------
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------
+MovieTest: test_3
+-----------------
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:31:01', '2016-04-10 07:31:01', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:31:01', '2016-04-10 07:31:01', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:31:01', '2016-04-10 07:31:01', 113629430)
+  [1m[36m (20.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------
+MovieTest: test_2
+-----------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 298486374]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------
+MovieTest: test_constraints
+---------------------------
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------
+MovieTest: test_3
+-----------------
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 113629430]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------
+MovieTest: test_1
+-----------------
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (6.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (14.0ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:32:48', '2016-04-10 07:32:48', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:32:48', '2016-04-10 07:32:48', 298486374)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:32:48', '2016-04-10 07:32:48', 113629430)
+  [1m[36m (21.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 19687ms (Views: 19687.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:35:17', '2016-04-10 07:35:17', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:35:17', '2016-04-10 07:35:17', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:35:17', '2016-04-10 07:35:17', 113629430)
+  [1m[36m (40.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 1530ms (Views: 1529.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 18ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:37:03', '2016-04-10 07:37:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:37:03', '2016-04-10 07:37:03', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:37:03', '2016-04-10 07:37:03', 113629430)
+  [1m[36m (45.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY year ASC
+  Rendered movies/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 1571ms (Views: 1570.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:37:35', '2016-04-10 07:37:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:37:35', '2016-04-10 07:37:35', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:37:35', '2016-04-10 07:37:35', 113629430)
+  [1m[36m (23.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY year ASC
+  Rendered movies/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 614ms (Views: 613.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:38:13', '2016-04-10 07:38:13', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:38:13', '2016-04-10 07:38:13', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:38:13', '2016-04-10 07:38:13', 113629430)
+  [1m[36m (21.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY year ASC
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 671ms (Views: 670.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:39:12', '2016-04-10 07:39:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:39:12', '2016-04-10 07:39:12', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:39:12', '2016-04-10 07:39:12', 113629430)
+  [1m[36m (20.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1550ms (Views: 1547.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:42:22', '2016-04-10 07:42:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:42:22', '2016-04-10 07:42:22', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:42:22', '2016-04-10 07:42:22', 113629430)
+  [1m[36m (21.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1673ms (Views: 1669.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:43:52', '2016-04-10 07:43:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:43:52', '2016-04-10 07:43:52', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:43:52', '2016-04-10 07:43:52', 113629430)
+  [1m[36m (21.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 1508ms (Views: 1507.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------
+MoviesControllerTest: test_create
+---------------------------------
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MoviesController#create as HTML
+  Parameters: {"movie"=>"980190962"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:44:33', '2016-04-10 07:44:33', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:44:33', '2016-04-10 07:44:33', 298486374)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:44:33', '2016-04-10 07:44:33', 113629430)
+  [1m[36m (24.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+---------------------------------
+MoviesControllerTest: test_create
+---------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#create as HTML
+  Parameters: {"movie"=>{"title"=>"The Terminator", "year"=>"1984"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "The Terminator"], ["year", 1984], ["created_at", "2016-04-10 07:44:33.681804"], ["updated_at", "2016-04-10 07:44:33.681804"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/movies/980190963
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+  [1m[36m (5.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 652ms (Views: 650.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "movies"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('The Terminator', 1984, '2016-04-10 07:46:48', '2016-04-10 07:46:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 2: Judgment Day', 1992, '2016-04-10 07:46:48', '2016-04-10 07:46:48', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at", "id") VALUES ('Terminator 3: Rise of the Machines', 2003, '2016-04-10 07:46:48', '2016-04-10 07:46:48', 113629430)
+  [1m[36m (21.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------
+MoviesControllerTest: test_show
+-------------------------------
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered movies/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 2073ms (Views: 2070.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------
+MoviesControllerTest: test_index
+--------------------------------
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY year ASC[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+MoviesControllerTest: test_create_template
+------------------------------------------
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MoviesController#create as HTML
+  Parameters: {"movie"=>{"title"=>"The Terminator", "year"=>"1984"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Terminator"], ["year", 1984], ["created_at", "2016-04-10 07:46:50.735876"], ["updated_at", "2016-04-10 07:46:50.735876"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/movies/980190963
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+  [1m[35m (6.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------
+MoviesControllerTest: test_create
+---------------------------------
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MoviesController#create as HTML
+  Parameters: {"movie"=>{"title"=>"The Terminator", "year"=>"1984"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "The Terminator"], ["year", 1984], ["created_at", "2016-04-10 07:46:50.751395"], ["updated_at", "2016-04-10 07:46:50.751395"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/movies/980190963
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[35m (5.4ms)[0m  rollback transaction
