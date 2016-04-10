@@ -1,0 +1,87 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/welcome_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/movies_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/application_helper.rb": [
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/welcome_helper.rb": [
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/movies_helper.rb": [
+        0,
+        0
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/models/movie.rb": [
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1460328304
+  }
+}
