@@ -3,5 +3,8 @@ language: ruby
 rvm:
   - 2.2
 
+before_script:
+  - 'rake db:migrate RAILS_ENV=test'
+
 after_success:
   - coveralls
