@@ -25,6 +25,16 @@
         <%= @movie.year %>
       </td>
     </tr>
+    <tr>
+      <td>
+        <b>
+          Director
+        </b>
+      </td>
+      <td>
+        <%= link_to @director.full_name, directors_path(@director) %>
+      </td>
+    </tr>
   </tbody>
 </table>
 <hr>

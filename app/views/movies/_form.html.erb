@@ -12,12 +12,28 @@
     </div>
     <br>
   <% end %>
-  <%= m.label :title %>
-  <%= m.text_field :title %>
-  <br>
-  <%= m.label :year %>
-  <%= m.number_field :year %>
-  <br>
-  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= m.label :title %></th>
+        <th><%= m.label :year %></th>
+        <th><%= m.label :director %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= m.text_field :title %>
+        </td>
+        <td>
+          <%= m.number_field :year %>
+        </td>
+        <td>
+          <%= m.collection_select :director_id, Director.all, :id, :full_name, {:prompt => 'Please select a director'} %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
   <%= m.submit %>
 <% end %>
