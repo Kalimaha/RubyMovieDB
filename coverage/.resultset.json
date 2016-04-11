@@ -83,5 +83,90 @@
       ]
     },
     "timestamp": 1460329363
+  },
+  "Unit Tests": {
+    "coverage": {
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/models/movie.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/movies_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/movies_helper.rb": [
+        1,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Volumes/DataSD/development/git-repositories/RubyMovieDB/app/controllers/welcome_controller.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1460330479
   }
 }

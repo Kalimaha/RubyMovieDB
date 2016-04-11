@@ -2,10 +2,15 @@ require 'test_helper'
 
 class MoviesControllerTest < ActionController::TestCase
 
-  def test_index
-    get :index
+  def test_new
+    get :new
     assert_response :success
-    assert_not_nil assigns(:movies)
+    assert_not_nil assigns(:movie)
+  end
+
+  def test_create
+    post :create, movie: {title: movies(:one).title, year: movies(:one).year}
+    assert_redirected_to movie_path(assigns(:movie))
   end
 
   def test_show
@@ -14,9 +19,16 @@ class MoviesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:movie)
   end
 
-  def test_create
-    post :create, movie: {title: movies(:one).title, year: movies(:one).year}
-    assert_redirected_to movie_path(assigns(:movie))
+  def test_index
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:movies)
+  end
+
+  def test_edit
+    get(:edit, {'id' => movies(:one).id})
+    assert_response :success
+    assert_not_nil assigns(:movie)
   end
 
 end

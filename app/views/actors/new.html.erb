@@ -1,0 +1,47 @@
+<h1>
+  Add a New Actor
+</h1>
+
+<hr>
+
+<%= form_for :actor, url: actors_path do |a| %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <%= a.label :first_name %>
+          </th>
+          <th>
+            <%= a.label :last_name %>
+          </th>
+          <th>
+            <%= a.label :birthday %>
+          </th>
+          <th>
+            <%= a.label :country %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <%= a.text_field :first_name %>
+          </td>
+          <td>
+            <%= a.text_field :last_name %>
+          </td>
+          <td>
+            <%= a.date_field :birthday %>
+          </td>
+          <td>
+            <%= a.text_field :country %>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <%= a.submit %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<% end %>

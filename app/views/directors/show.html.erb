@@ -1,0 +1,8 @@
+<h1>
+  <%= @director.first_name %> <%= @director.last_name %> (<%= @director.type %>)
+</h1>
+
+<hr>
+
+<%= @director.first_name %> <%=@director.last_name %> was born on <%= @director.birthday.strftime('%d %b %Y') %> in
+<%= @director.country %>.
