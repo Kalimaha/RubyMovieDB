@@ -6,3 +6,7 @@
 
 <%= @director.first_name %> <%=@director.last_name %> was born on <%= @director.birthday.strftime('%d %b %Y') %> in
 <%= @director.country %>.
+
+<hr>
+
+<%= link_to 'Back to the List of Directors', directors_path %>
