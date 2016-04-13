@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class MoviesControllerTest < ActionController::TestCase
+
   setup do
     @movie = movies(:one)
   end
@@ -20,7 +21,6 @@ class MoviesControllerTest < ActionController::TestCase
     assert_difference('Movie.count') do
       post :create, movie: { synopsis: @movie.synopsis, title: @movie.title, year: @movie.year }
     end
-
     assert_redirected_to movie_path(assigns(:movie))
   end
 
@@ -43,7 +43,7 @@ class MoviesControllerTest < ActionController::TestCase
     assert_difference('Movie.count', -1) do
       delete :destroy, id: @movie
     end
-
     assert_redirected_to movies_path
   end
+
 end
