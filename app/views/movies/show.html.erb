@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @movie.synopsis %>
+</p>
+
+<%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
+<%= link_to '<i class="fa fa-arrow-left"></i> Back'.html_safe, movies_path, class: 'btn btn-primary' %>
