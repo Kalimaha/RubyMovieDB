@@ -15,5 +15,10 @@
   <%= @movie.synopsis %>
 </p>
 
+<p>
+  <strong>Director:</strong>
+  <%= @director.full_name %>
+</p>
+
 <%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
 <%= link_to '<i class="fa fa-arrow-left"></i> Back'.html_safe, movies_path, class: 'btn btn-primary' %>

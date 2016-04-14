@@ -1531,3 +1531,971 @@ Migrating to AddDirectorIdToMovies (20160414053806)
             FROM sqlite_temp_master
             WHERE name='index_movies_on_director_id' AND type='index'
 [0m
+
+
+Started GET "/" for ::1 at 2016-04-14 15:44:49 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 188ms (Views: 177.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 15:44:50 +1000
+
+
+Started GET "/directors/new" for ::1 at 2016-04-14 15:45:06 +1000
+Processing by DirectorsController#new as HTML
+  Rendered directors/_form.html.erb (9.7ms)
+  Rendered directors/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 107ms (Views: 95.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/directors" for ::1 at 2016-04-14 15:45:35 +1000
+Processing by DirectorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpgxI3l3geRGl95Ssj8LGZd6ZAhh4mSR8QbB1TwnZfZ13Ayl4Q9iA7d96mBo5ADDcVCZsKNtB0LHdmVJxodgnA==", "director"=>{"first_name"=>"James", "last_name"=>"Cameron", "birthday(1i)"=>"2016", "birthday(2i)"=>"8", "birthday(3i)"=>"16"}, "commit"=>"Create Director"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "directors" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "James"], ["last_name", "Cameron"], ["birthday", "2016-08-16"], ["created_at", "2016-04-14 05:45:35.680739"], ["updated_at", "2016-04-14 05:45:35.680739"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/directors/1
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/directors/1" for ::1 at 2016-04-14 15:45:35 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (0.2ms)[0m  SELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered directors/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors" for ::1 at 2016-04-14 15:45:40 +1000
+Processing by DirectorsController#index as HTML
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT "directors".* FROM "directors"[0m
+  Rendered directors/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 90ms (Views: 88.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/directors/1/edit" for ::1 at 2016-04-14 15:45:44 +1000
+Processing by DirectorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (0.1ms)[0m  SELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered directors/_form.html.erb (5.8ms)
+  Rendered directors/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/directors/1" for ::1 at 2016-04-14 15:45:48 +1000
+Processing by DirectorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Me/gQIkmwGGppKFr4PRq2gWFNvv6SJE1ftTyfygXCTjCq93GEV4jhlhOlVk6L2EA46/LQzjH8uZIpFbj0rcMUg==", "director"=>{"first_name"=>"James", "last_name"=>"Cameron", "birthday(1i)"=>"2016", "birthday(2i)"=>"8", "birthday(3i)"=>"16"}, "commit"=>"Update Director", "id"=>"1"}
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/directors/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/directors/1" for ::1 at 2016-04-14 15:45:48 +1000
+Processing by DirectorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDirector Load (0.2ms)[0m  SELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered directors/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 15:52:03 +1000
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (14.1ms)
+  Rendered movies/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 94ms (Views: 93.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 15:52:59 +1000
+Processing by MoviesController#new as HTML
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT "directors".* FROM "directors"[0m
+  Rendered movies/_form.html.erb (15.4ms)
+  Rendered movies/new.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `full_name' for #<Director:0x007fc31dace4b8>):
+    23:   </div>
+    24:   <div class="field">
+    25:     <%= f.label :director %><br>
+    26:     <%= f.collection_select :director_id, Director.all, :id, :full_name, {:prompt => 'Please select a director'} %>
+    27:   </div>
+    28:   <div class="actions">
+    29:     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+  app/views/movies/_form.html.erb:26:in `block in _app_views_movies__form_html_erb__2764325984362667278_70238040193740'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__2764325984362667278_70238040193740'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__3930618704678846035_70238001392820'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (175.6ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 15:53:48 +1000
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.5ms)[0m  SELECT "directors".* FROM "directors"
+  Rendered movies/_form.html.erb (9.2ms)
+  Rendered movies/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 105ms (Views: 96.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 15:53:48 +1000
+
+
+Started POST "/movies" for ::1 at 2016-04-14 15:55:22 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IDxu5w/H8ASp8jvP3SFJdjcnVoeoo+1+S9XFCmqq6kDTeFNhl78T41gYD/0H+kKs0Q2rP2osjq19pWGWkArvKg==", "movie"=>{"title"=>"Terminator 2: Judgment Day", "year"=>"1994", "synopsis"=>"Apocalypse", "director_id"=>"1"}, "button"=>""}
+Unpermitted parameter: director_id
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "movies" ("title", "year", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Terminator 2: Judgment Day"], ["year", 1994], ["synopsis", "Apocalypse"], ["created_at", "2016-04-14 05:55:22.763102"], ["updated_at", "2016-04-14 05:55:22.763102"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-04-14 15:55:22 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 87ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-04-14 15:56:24 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Director:</strong>
+    20:   <%= @director.full_name %>
+    21: </p>
+    22: 
+    23: <%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
+  app/views/movies/show.html.erb:20:in `_app_views_movies_show_html_erb__500208471929436732_70238036329600'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.2ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (89.8ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (178.6ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-04-14 15:57:13 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Director:</strong>
+    20:   <%= @director.full_name %>
+    21: </p>
+    22: 
+    23: <%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
+  app/views/movies/show.html.erb:20:in `_app_views_movies_show_html_erb__500208471929436732_70238036329600'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (174.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-04-14 15:57:35 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Director:</strong>
+    20:   <%= @director.first_name %>
+    21: </p>
+    22: 
+    23: <%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
+  app/views/movies/show.html.erb:20:in `_app_views_movies_show_html_erb__500208471929436732_70238037366700'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (84.8ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (166.4ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-04-14 15:59:24 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 119ms (Views: 110.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 15:59:25 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_movies_on_director_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_movies_on_director_id' AND type='index'
+[0m
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:01:33 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.2ms)[0m  SELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 37ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=):
+  app/controllers/movies_controller.rb:19:in `new'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (93.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (205.8ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:01:34 +1000
+Processing by MoviesController#new as HTML
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=):
+  app/controllers/movies_controller.rb:19:in `new'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (150.3ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:02:32 +1000
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.2ms)[0m  SELECT "directors".* FROM "directors"
+  Rendered movies/_form.html.erb (32.1ms)
+  Rendered movies/new.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 697ms (Views: 688.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 16:02:32 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 16:02:33 +1000
+
+
+Started POST "/movies" for ::1 at 2016-04-14 16:02:45 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Qapur+Xq/yRUgVRpQXHKqq9vY9zWFC8hS109BqDLkQWQpQ8J+9IG2C4MWN/3szwTJdAN7HXM2+zXdBo4CMrLg==", "movie"=>{"title"=>"Terminator 3: Rise of the Machines", "year"=>"2001", "synopsis"=>"asd", "director_id"=>"1"}, "button"=>""}
+Unpermitted parameter: director_id
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "movies" ("title", "year", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Terminator 3: Rise of the Machines"], ["year", 2001], ["synopsis", "asd"], ["created_at", "2016-04-14 06:02:45.653258"], ["updated_at", "2016-04-14 06:02:45.653258"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-04-14 16:02:45 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mDirector Load (0.3ms)[0m  [1mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Director with 'id'=):
+  app/controllers/movies_controller.rb:13:in `show'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (178.0ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:04:48 +1000
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.2ms)[0m  SELECT "directors".* FROM "directors"
+  Rendered movies/_form.html.erb (30.0ms)
+  Rendered movies/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 143ms (Views: 135.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:04:48 +1000
+Processing by MoviesController#new as HTML
+  [1m[36mDirector Load (0.1ms)[0m  [1mSELECT "directors".* FROM "directors"[0m
+  Rendered movies/_form.html.erb (2.9ms)
+  Rendered movies/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/movies" for ::1 at 2016-04-14 16:04:59 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MuZ3+OmGr7xH1KZDDNrccx/vft5RGgIGmZsCeXu+x23Bokp+cf5MW7Y+knHWAdep+cWDZpOVYdWv66blgR7CBw==", "movie"=>{"title"=>"Terminator 4", "year"=>"2005", "synopsis"=>"", "director"=>"1"}, "button"=>""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch (Director(#70253510274200) expected, got String(#70253476497260)):
+  app/controllers/movies_controller.rb:27:in `create'
+
+
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.9ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/simona/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (205.2ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:05:52 +1000
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.2ms)[0m  SELECT "directors".* FROM "directors"
+  Rendered movies/_form.html.erb (10.6ms)
+  Rendered movies/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 81ms (Views: 73.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 16:05:52 +1000
+
+
+Started POST "/movies" for ::1 at 2016-04-14 16:05:56 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDr41NdmwZi/dBGgA1wG/+tCa+zL24bR4Ra7uqiqAUU7fsVSTx4if06eJZLZhw0lDWiWVAlU5QLXZh8mUgoELw==", "movie"=>{"title"=>"", "year"=>"", "synopsis"=>"", "director_id"=>"1"}, "button"=>""}
+Unpermitted parameter: director_id
+Unpermitted parameter: director_id
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("title", "synopsis", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["synopsis", ""], ["created_at", "2016-04-14 06:05:56.583720"], ["updated_at", "2016-04-14 06:05:56.583720"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-04-14 16:05:56 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:11:06 +1000
+Processing by MoviesController#new as HTML
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT "directors".* FROM "directors"[0m
+  Rendered movies/_form.html.erb (16.9ms)
+  Rendered movies/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 132ms (Views: 123.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:11:06 +1000
+Processing by MoviesController#new as HTML
+  [1m[35mDirector Load (0.1ms)[0m  SELECT "directors".* FROM "directors"
+  Rendered movies/_form.html.erb (3.0ms)
+  Rendered movies/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/movies" for ::1 at 2016-04-14 16:11:11 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8QNmMUJyRUxSZmlp2egdXALxgLDGq3jynGZIYlJJ1uUCR1u32gqmq6OMXVsDMxaG5Nt9CAQkGyGqFuz+qOnTjw==", "movie"=>{"title"=>"asd", "year"=>"", "synopsis"=>"", "director_id"=>"1"}, "button"=>""}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("title", "synopsis", "director_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "asd"], ["synopsis", ""], ["director_id", 1], ["created_at", "2016-04-14 06:11:11.456540"], ["updated_at", "2016-04-14 06:11:11.456540"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/5
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/5" for ::1 at 2016-04-14 16:11:11 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered movies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-04-14 16:11:30 +1000
+Processing by MoviesController#new as HTML
+  [1m[36mDirector Load (0.2ms)[0m  [1mSELECT "directors".* FROM "directors"[0m
+  Rendered movies/_form.html.erb (3.2ms)
+  Rendered movies/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/movies" for ::1 at 2016-04-14 16:11:38 +1000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t75ulE34N06n1nM4JdTyY7Fx0xTLKUxr79X384hj6mVE+lMS1YDUqVY8Rwr/D/m5V1surAmmL7jZpVNvcsPvDw==", "movie"=>{"title"=>"sdfsdf", "year"=>"123", "synopsis"=>"sfgsfgdgf", "director_id"=>"1"}, "button"=>""}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "year", "synopsis", "director_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "sdfsdf"], ["year", 123], ["synopsis", "sfgsfgdgf"], ["director_id", 1], ["created_at", "2016-04-14 06:11:38.279674"], ["updated_at", "2016-04-14 06:11:38.279674"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/6
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/6" for ::1 at 2016-04-14 16:11:38 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/6" for ::1 at 2016-04-14 16:19:30 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mDirector Load (0.1ms)[0m  [1mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 188ms (Views: 145.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 16:19:31 +1000
+
+
+Started GET "/movies/6" for ::1 at 2016-04-14 16:19:51 +1000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mDirector Load (0.1ms)[0m  [1mSELECT  "directors".* FROM "directors" WHERE "directors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/directors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/scaffolds.self-cacfd59859106ca8bacefea005bbf7e8407d78b6174844143368e098e9e49dc3.css?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/application.self-96deb0473715372db71f9f14d90e208737d6aa9895a5a7b49fcf2fde9e686769.css?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/directors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-04-14 16:19:51 +1000

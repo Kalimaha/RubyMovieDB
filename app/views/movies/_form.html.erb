@@ -21,6 +21,10 @@
     <%= f.label :synopsis %><br>
     <%= f.text_area :synopsis %>
   </div>
+  <div class="field">
+    <%= f.label :director %><br>
+    <%= f.collection_select :director_id, Director.all, :id, :full_name, {:prompt => 'Please select a director'} %>
+  </div>
   <div class="actions">
     <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
         <i class="fa fa-save"></i> Save Movie
