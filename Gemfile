@@ -35,6 +35,9 @@ gem 'autoprefixer-rails'
 # Coveralls
 gem 'coveralls', require: false
 
+# PostgreSQL
+gem 'pg'
+
 # Use SQLite in the test and development environments
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
