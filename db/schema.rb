@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414052838) do
+ActiveRecord::Schema.define(version: 20160414053806) do
 
   create_table "directors", force: :cascade do |t|
     t.string   "first_name"
@@ -25,8 +25,11 @@ ActiveRecord::Schema.define(version: 20160414052838) do
     t.string   "title"
     t.integer  "year"
     t.text     "synopsis"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "director_id"
   end
+
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id"
 
 end
