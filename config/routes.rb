@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
 
-  # Routes
-  get 'welcome/index'
-
+  resources :directors
   # Resources
   resources :movies
-  resources :artists
-  resources :actors
-  resources :directors
 
-  # You can have the root of your site routed with "root"
+  # Root URL
   root 'movies#index'
 
 end

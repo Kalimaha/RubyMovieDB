@@ -1,11 +1,9 @@
-class CreateArtists < ActiveRecord::Migration
+class CreateDirectors < ActiveRecord::Migration
   def change
-    create_table :artists do |t|
-      t.string :type
+    create_table :directors do |t|
       t.string :first_name
       t.string :last_name
       t.date :birthday
-      t.string :country
 
       t.timestamps null: false
     end

@@ -1,3 +1,7 @@
-class Director < Artist
-  has_many :movies
+class Director < ActiveRecord::Base
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
 end

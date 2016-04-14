@@ -1,43 +1,33 @@
-<%= form_for @movie, url: movies_path do |m| %>
+<%= form_for(@movie) do |f| %>
   <% if @movie.errors.any? %>
-    <div id="error_explanation" class="error">
-      <h2>
-        <%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:
-      </h2>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
       <ul>
-        <% @movie.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
-    <br>
   <% end %>
-  <table class="table">
-    <tbody>
-      <tr>
-        <td><%= m.label :title %></td>
-        <td>
-          <%= m.text_field :title %>
-        </td>
-      </tr>
-      <tr>
-        <td><%= m.label :year %></td>
-        <td>
-          <%= m.number_field :year %>
-        </td>
-      </tr>
-      <tr>
-        <td><%= m.label :director %></td>
-        <td>
-          <%= m.collection_select :director_id, Director.all, :id, :full_name, {:prompt => 'Please select a director'} %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-    <i class="fa fa-save"></i> Save Movie
-  <% end %>
-  or
-  <%= link_to '<i class="fa fa-arrow-left"></i> Back to the List of Movies'.html_safe, movies_path %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %><br>
+    <%= f.text_area :synopsis %>
+  </div>
+  <div class="field">
+    <%= f.label :director %><br>
+    <%= f.collection_select :director_id, Director.all, :id, :full_name, {:prompt => 'Please select a director'} %>
+  </div>
+  <div class="actions">
+    <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+        <i class="fa fa-save"></i> Save Movie
+    <% end %>
+  </div>
 <% end %>

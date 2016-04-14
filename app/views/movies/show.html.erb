@@ -1,42 +1,24 @@
-<h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
   <%= @movie.title %>
-</h1>
+</p>
 
-<hr>
-<table class="table table-bordered table-hover table-responsive table-condensed">
-  <tbody>
-    <tr>
-      <td>
-        <b>
-          Title
-        </b>
-      </td>
-      <td>
-        <%= @movie.title %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>
-          Year
-        </b>
-      </td>
-      <td>
-        <%= @movie.year %>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>
-          Director
-        </b>
-      </td>
-      <td>
-        <%= link_to @director.full_name, directors_path(@director) %>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<hr>
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
 
-<%= link_to '<i class="fa fa-arrow-left"></i> Back to the List of Movies'.html_safe, controller: 'movies' %>
+<p>
+  <strong>Synopsis:</strong>
+  <%= @movie.synopsis %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @director.full_name %>
+</p>
+
+<%= link_to '<i class="fa fa-edit"></i> Edit'.html_safe, edit_movie_path(@movie), class: 'btn btn-primary' %> |
+<%= link_to '<i class="fa fa-arrow-left"></i> Back'.html_safe, movies_path, class: 'btn btn-primary' %>

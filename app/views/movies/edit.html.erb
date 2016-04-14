@@ -1,29 +1,8 @@
 <h1>
-  Edit an Existing Movie
+  <i class="fa fa-edit"></i> Editing Movie
 </h1>
 
-<hr>
+<%= render 'form' %>
 
-<%= form_for :movie, url: movie_path(@movie), method: :patch do |m| %>
-  <% if @movie.errors.any? %>
-    <div id="error_explanation" class="error">
-      <h2>
-        <%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:
-      </h2>
-      <ul>
-        <% @movie.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-    <br>
-  <% end %>
-  <%= m.label :title %>
-  <%= m.text_field :title %>
-  <br>
-  <%= m.label :year %>
-  <%= m.number_field :year %>
-  <br>
-  <br>
-  <%= m.submit %>
-<% end %>
+<%= link_to '<i class="fa fa-video-camera"></i> Show'.html_safe, @movie, class: 'btn btn-primary' %> |
+<%= link_to '<i class="fa fa-arrow-left"></i> Back'.html_safe, movies_path, class: 'btn btn-primary' %>
