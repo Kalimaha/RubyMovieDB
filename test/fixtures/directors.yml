@@ -1,11 +1,5 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  first_name: MyString
-  last_name: MyString
-  birthday: 2016-04-14
-
-two:
-  first_name: MyString
-  last_name: MyString
-  birthday: 2016-04-14
+  id: 1
+  first_name: James
+  last_name: Cameron
+  birthday: 1954-08-16
